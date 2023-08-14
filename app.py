@@ -43,25 +43,25 @@ def hello_world():
 	response_data = jsonify(json_response)
 	return response_data
 
-# @app.route('/text', methods=['GET'])
-# def text():
-# 	json_response = {
-# 		'status_code' : 200,
-# 		'description' : "Original text",
-# 		'data' : "Hellow, apa kabar semua?",
-# 	}
-# 	response_data = jsonify(json_response)
-# 	return response_data
+@app.route('/text', methods=['GET'])
+def text():
+	json_response = {
+		'status_code' : 200,
+		'description' : "Original text",
+		'data' : "Hellow, apa kabar semua?",
+	}
+	response_data = jsonify(json_response)
+	return response_data
 
-# @app.route('/text-clean', methods=['GET'])
-# def text_clean():
-# 	json_response = {
-# 		'status_code' : 200,
-# 		'description' : "Original text",
-# 		'data' : re.sub(r'[^a-zA-Z0-9]', '', "Hellow, apa kabar semua9999?"),
-# 	}
-# 	response_data = jsonify(json_response)
-# 	return response_data
+@app.route('/text-clean', methods=['GET'])
+def text_clean():
+	json_response = {
+		'status_code' : 200,
+		'description' : "Original text",
+		'data' : re.sub(r'[^a-zA-Z0-9]', '', "Hellow, apa kabar semua9999?"),
+	}
+	response_data = jsonify(json_response)
+	return response_data
 
 
 if __name__ == '__main__':
